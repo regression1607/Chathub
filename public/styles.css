@@ -1,0 +1,368 @@
+/* public/styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Login Page Styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.login-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    width: 400px;
+    max-width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+}
+
+.login-header i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #6e8efb;
+}
+
+.login-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.login-subtitle {
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #6e8efb;
+    box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.2);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.login-btn i {
+    margin-left: 8px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+}
+
+/* Chat Page Styling */
+.sidebar {
+    width: 280px;
+    background-color: #2c3e50;
+    color: white;
+    overflow-y: auto;
+    transition: all 0.3s;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #243342;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.sidebar-header h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.sidebar-header i {
+    margin-right: 10px;
+    color: #6e8efb;
+}
+
+.user-count {
+    background-color: #6e8efb;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.user-list {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.user-list li {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.user-list li:hover {
+    background-color: #34495e;
+}
+
+.user-list li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    margin-right: 10px;
+}
+
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.chat-header h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+#username-display {
+    background-color: #e9f5ff;
+    color: #3498db;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border-radius: 15px;
+    max-width: 75%;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+.my-message {
+    background-color: #dcf8c6;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.other-message {
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.message-sender {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #4a4a4a;
+}
+
+.my-message .message-sender {
+    color: #4caf50;
+}
+
+.other-message .message-sender {
+    color: #3498db;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #888;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.system-message {
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #888;
+    padding: 8px 15px;
+    margin: 10px auto;
+    border-radius: 20px;
+    max-width: 80%;
+    font-size: 0.85rem;
+}
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+    margin-right: 10px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.input-area input:focus {
+    outline: none;
+    border-color: #6e8efb;
+    background-color: white;
+}
+
+.input-area button {
+    width: 45px;
+    height: 45px;
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.input-area button:hover {
+    background-color: #5a7af0;
+    transform: scale(1.05);
+}
+
+.input-area button i {
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+    }
+    
+    .sidebar.expanded {
+        height: 300px;
+    }
+    
+    .sidebar-header {
+        cursor: pointer;
+    }
+    
+    .messages {
+        padding: 15px;
+    }
+    
+    .message {
+        max-width: 85%;
+    }
+}

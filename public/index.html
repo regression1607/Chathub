@@ -1,0 +1,58 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chathub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="login-page" class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-comments"></i>
+                <h1>chathub</h1>
+            </div>
+            <p class="login-subtitle">Connect with people around the world</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username-input" placeholder="Enter your username" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    Join Chathub <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="chat-page" class="container hidden">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-users"></i> Online Users</h2>
+                <span id="user-count" class="user-count">0</span>
+            </div>
+            <ul id="user-list" class="user-list"></ul>
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <h2>Chat Room</h2>
+                <span id="username-display"></span>
+            </div>
+            <div id="messages" class="messages"></div>
+            <form id="message-form" class="input-area">
+                <input type="text" id="message-input" placeholder="Type a message..." required>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

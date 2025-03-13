@@ -1,9 +1,7 @@
-
-```markdown
 # ChatHub
 
-![ChatHub Home Screen](./images/screenshot1.png)
-![ChatHub Chat Demo](./images/screenshot2.png)
+![ChatHub Home Screen](./img.png)
+![ChatHub Chat Demo](./img1.png)
 
 ChatHub is a real-time chat application built with [NestJS](https://nestjs.com/) and [MongoDB](https://www.mongodb.com/). It offers an engaging and scalable platform where users can join the chat and interact in real time. The project emphasizes modular architecture, ease of configuration, and robust real-time communication.
 
